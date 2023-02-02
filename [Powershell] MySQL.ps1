@@ -1,8 +1,8 @@
-$host.ui.RawUI.WindowTitle = "MYSQL¸ê®Æ®w³Æ¥÷¤¤..."
-echo ¶}©l³Æ¥÷MySQL¸ê®Æ®w...
+$host.ui.RawUI.WindowTitle = "MYSQLè³‡æ–™åº«å‚™ä»½ä¸­..."
+echo é–‹å§‹å‚™ä»½MySQLè³‡æ–™åº«...
 
 $fileName = Get-Date -Format "yyyy-MM-dd-HH-mm-ss"
-$filePath = "D:\MySQL³Æ¥÷"
+$filePath = "D:\MySQLå‚™ä»½"
 
 mysqldump --login-path=local --all-databases > "$filePath\$fileName.sql"
 
@@ -10,7 +10,7 @@ mysqldump --login-path=local --all-databases > "$filePath\$fileName.sql"
 $objNotifyIcon = New-Object System.Windows.Forms.NotifyIcon
 $objNotifyIcon.Icon = [System.Drawing.SystemIcons]::Information
 $objNotifyIcon.BalloonTipIcon = "Info" 
-$objNotifyIcon.BalloonTipTitle = "MySQL¸ê®Æ®w³Æ¥÷§¹¦¨" 
-$objNotifyIcon.BalloonTipText = "ÀÉ®×¦WºÙ: $fileName.sql    ÀÉ®×¦ì¸m: $filePath"
+$objNotifyIcon.BalloonTipTitle = "MySQLè³‡æ–™åº«å‚™ä»½å®Œæˆ" 
+$objNotifyIcon.BalloonTipText = "æª”æ¡ˆåç¨±: $fileName.sql    æª”æ¡ˆä½ç½®: $filePath"
 $objNotifyIcon.Visible = $True 
 $objNotifyIcon.ShowBalloonTip(10000)
